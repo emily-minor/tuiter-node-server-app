@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "name": "tuiter-node-server-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emily-minor/tuiter-node-server-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emily-minor/tuiter-node-server-app/issues"
+  },
+  "homepage": "https://github.com/emily-minor/tuiter-node-server-app#readme"
+}
