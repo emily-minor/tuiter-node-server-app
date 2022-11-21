@@ -6,6 +6,7 @@ const UserController = (app) => {
     app.get('/api/users', findUsers);
     app.get('/api/users/:uid', findUserById);
     app.post('/api/users', createUser);
+    app.delete('/api/users/:uid', deleteUser);
 }
 
 const findUserById = (req, res) => {
@@ -14,6 +15,14 @@ const findUserById = (req, res) => {
         .find(u => u._id === userId);
     res.json(user);
 }
+
+const deleteUser = (req, res) => {
+    const userId = req.params['uid'];
+    users = users.filter(usr =>
+        usr._id !== userId);
+    res.sendStatus(200);
+}
+
 
 const createUser = (req, res) => {
     const newUser = req.body;
