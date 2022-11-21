@@ -7,7 +7,20 @@ const UserController = (app) => {
     app.get('/api/users/:uid', findUserById);
     app.post('/api/users', createUser);
     app.delete('/api/users/:uid', deleteUser);
+    app.put('/api/users/:uid', updateUser);
 }
+
+const updateUser = (req, res) => {
+    const userId = req.params['uid'];
+    const updates = req.body;
+    users = users.map((usr) =>
+        usr._id === userId ?
+            {...usr, ...updates} :
+            usr
+    );
+    res.sendStatus(200);
+}
+
 
 const findUserById = (req, res) => {
     const userId = req.params.uid;
